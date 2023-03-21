@@ -7,7 +7,8 @@ var path = require("path");
 class class1 {
   static a = async (req, res) => {
     try {
-      res.render("First");
+      var OriginalData = await Todo.find({});
+      res.render("First", { OriginalData });
     } catch (err) {
       console.log(err);
       return res.status(HTTP.SUCCESS).send({
