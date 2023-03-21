@@ -33,6 +33,24 @@
 
 <body>
 
+<h1>Here I have taken the test as id</h1>
+
+  <%if (OriginalData.length > 1) { %>
+
+    <h2>similarly we can replace id with
+      <% for(var i=1; i<OriginalData.length; i++) {%>
+
+       <% if(i <= 1){ %>
+         <%=OriginalData[i].App%>
+       <% } else{ %>
+         , <%=OriginalData[i].App%>
+      <% } %>
+
+      <% } %>
+     </h2>
+
+    <% } %>
+
 <table id="customers">
   <tr>
     <th>Route</th>
@@ -42,19 +60,20 @@
  <tr>
     <td>Show</td>
     <td>Get</td>
-    <td>For Show All Ads Data With App Name</td>
+    <td><a style="color:black; text-decoration: none;" href="Show">For Show All Ads Data With App Name</a></td>
   </tr>
   <tr>
     <td>id/data</td>
     <td>Get</td>
-    <td>For Get Ads Data</td>
+    <td><a style="color:black; text-decoration: none;"  href="test/data">For Get Ads Data</a></td>
   </tr>
   <tr>
     <td>id</td>
     <td>post</td>
-    <td>For Update Ads data</td>
+    <td><a style="color:black; text-decoration: none;" href="test">For Update Ads data</a></td>
   </tr>
 </table>
+
 
 </body>
 </html>
